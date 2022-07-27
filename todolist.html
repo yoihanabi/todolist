@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>todolist</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/bootstrap.css.map">
+    <script src="./js/jquery.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap-table/1.15.4/bootstrap-table.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap-table/1.15.4/locale/bootstrap-table-zh-CN.min.js"></script>
+<style>
+    .selected td:nth-child(2) {
+        text-decoration:line-through;
+        color:red;
+    }
+</style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="span4">
+                <div class="tabbable">
+                    <ul class="nav nav-pills">
+                        <li class="active"><a href="#all" data-toggle="tab" id="all">所有</a></li>
+                        <li class=""><a href="#finish" data-toggle="tab" id="finish">已完成</a></li>
+                        <li class=""><a href="#unfinished" data-toggle="tab" id="unfinished">未完成</a></li>
+                    </ul>
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="addin" placeholder="输入要做的">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button" id="add">添加</button>
+                            </span>
+                        </div>
+                    </div>
+                    <table id="table"></table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/todolist.js"></script>
+</body>
+
+</html>
